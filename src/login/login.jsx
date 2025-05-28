@@ -15,6 +15,7 @@ const Login = () =>{
             .then((res) => {
                 console.log('Users:', res.data)
                 if(password == res.data.password){
+                    localStorage.setItem('id',res.data.id);
                     navigate('/home')
                 }
             })
