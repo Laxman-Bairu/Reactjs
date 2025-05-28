@@ -20,4 +20,10 @@ npm start
 ``DB connection
   run -- : json-server
 
+  Docker to create docker image and docker container run the below command to create docker container
+
+  docker build -t reactjs .
+
+  docker run -d -p 3000:3000 --name reactjs-app reactjs:latest
+
   //Happy Coding - Laxman Bairu
