@@ -10,6 +10,12 @@
       "name": "Bairu Laxman",
       "password": "Test@123",
       "email": "laxmanbairu97@gmail.com"
+    },
+    {
+      "id": "sample",
+      "name": "sample",
+      "password": "sample@123",
+      "email": "test@gmail.com"
     }
   ]
 }

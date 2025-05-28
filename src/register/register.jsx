@@ -4,10 +4,11 @@ import { createUser } from "../services/userService";
 
 const Register = () => {
     const [username, setUserName] = useState('');
-const [name, setname] = useState('');
-const [password, setPassword] = useState('');
-const [email, setemail] = useState('');
-     const navigate = useNavigate();    
+    const [name, setname] = useState('');
+    const [password, setPassword] = useState('');
+    const [email, setemail] = useState('');
+
+    const navigate = useNavigate();    
     
     const handleRegisterSubmit = (e) => {
          e.preventDefault();
