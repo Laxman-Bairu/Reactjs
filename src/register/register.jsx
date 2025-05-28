@@ -1,6 +1,6 @@
 import React,{useState} from "react";
 import { useNavigate } from "react-router-dom";
-
+import { createUser } from "../services/userService"; 
 
 const Register = () => {
     const [username, setUserName] = useState('');
@@ -11,8 +11,16 @@ const [email, setemail] = useState('');
     
     const handleRegisterSubmit = (e) => {
          e.preventDefault();
-          console.log('username:', username);
-          console.log('Password:', password,e);
+          var reqobj = {}
+          reqobj.id = username;
+          reqobj.name = name;
+          reqobj.password = password;
+          reqobj.email = email;
+          
+          createUser(reqobj).then((res) => {
+            console.log('user:', res)
+            navigate('/login')
+          })
     }
      const goToLogin = () => {
         navigate('/login'); 
@@ -33,7 +41,7 @@ return (
                         </div>
                         <div className="mb-3">
                             <label htmlFor="name" className="form-label">Name</label>
-                            <input type="text" className="form-control" id="name"  value={name} onChange={(e) => setUserName(e.target.value)} placeholder="Enter username" />
+                            <input type="text" className="form-control" id="name"  value={name} onChange={(e) => setname(e.target.value)} placeholder="Enter name" />
                         </div>
                         <div className="mb-3">
                             <label htmlFor="password" className="form-label">Password</label>
@@ -41,7 +49,7 @@ return (
                         </div>
                         <div className="mb-3">
                             <label htmlFor="email" className="form-label">Email</label>
-                            <input type="text" className="form-control" id="eamil" value={email} onChange={(e) => setPassword(e.target.value)} placeholder="Password" />
+                            <input type="text" className="form-control" id="eamil" value={email} onChange={(e) => setemail(e.target.value)} placeholder="email" />
                         </div>
                         <div className="row justify-content-center">
                             <div className="col">
