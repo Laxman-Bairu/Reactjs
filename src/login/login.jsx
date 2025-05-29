@@ -30,7 +30,8 @@ const Login = () =>{
         navigate('/register'); 
     };
     return(
-        <div className="container mt-5">
+        <div className="login-page min-vh-100">
+        <div className="container pt-5">
             <div className="row justify-content-center align-items-center">
                 <div className="col-6">
                     <div className="card">
@@ -59,7 +60,7 @@ const Login = () =>{
                 </div>
             </div>
         </div>
-        
+        </div>
     );
 };
 

@@ -1,7 +1,7 @@
 import React,{useState} from "react";
 import { useNavigate } from "react-router-dom";
 import { createUser } from "../services/userService"; 
-
+import '../login/login.css';
 const Register = () => {
     const [username, setUserName] = useState('');
     const [name, setname] = useState('');
@@ -27,7 +27,8 @@ const Register = () => {
         navigate('/login'); 
     };
 return (
-    <div className="container mt-5 min-vh-100">
+    <div className="login-page pt-5 min-vh-100">
+    <div className="container">
             <div className="row justify-content-center align-items-center">
                 <div className="col-6">
                     <div className="card">
@@ -63,6 +64,7 @@ return (
             </div>
                 </div>
             </div>
+        </div>
         </div>
 )
 };
