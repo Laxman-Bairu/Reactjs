@@ -2,6 +2,8 @@ import React,{useState} from "react";
 import { useNavigate } from "react-router-dom";
 import { getUsers,getUserById } from "../services/userService";
 import Home from "../home/home";
+import '../login/login.css';
+import '../index.css';
 
 const Login = () =>{
     const [username, setUserName] = useState('');
@@ -28,12 +30,12 @@ const Login = () =>{
         navigate('/register'); 
     };
     return(
-        <div className="container mt-5 min-vh-100">
+        <div className="container mt-5">
             <div className="row justify-content-center align-items-center">
                 <div className="col-6">
                     <div className="card">
                 <div className="card-header">
-                     <h2 className="mb-4">Login</h2>
+                     <h2>Login</h2>
                 </div>
                 <div className="card-body">
                      <form onSubmit={handleSubmit}>
@@ -48,7 +50,7 @@ const Login = () =>{
                         <div className="row justify-content-center">
                             <div className="col">
                                 <button type="submit" className="btn btn-primary">Login</button>
-                                <button type="submit" className="btn btn-warning ms-2" onClick={goToRegister}>Register</button>
+                                <button type="button" className="btn btn-warning ms-2" onClick={goToRegister}>Register</button>
                             </div>
                         </div>
                     </form>

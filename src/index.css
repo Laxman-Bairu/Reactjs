@@ -11,3 +11,13 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+.btn-primary, .btn-warning{
+  background: none !important;
+  color: black !important;
+  border-color: rgb(224, 149, 149) !important;
+}
+.btn-primary:hover, .btn-warning:hover {
+  background: #3F5EFB !important;
+background: radial-gradient(circle,rgba(63, 94, 251, 1) 0%, rgba(252, 70, 107, 1) 100%) !important;
+color: white !important;
+}
